@@ -15,6 +15,7 @@ public class HelloController {
     }
 
 
+
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model model){
         model.addAttribute("name",name); // "name"은 key, name은 파라미터의 String name

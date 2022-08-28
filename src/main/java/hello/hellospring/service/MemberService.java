@@ -8,8 +8,12 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
+// 컨트롤 + 시프트 + t 누르면 자동으로 테스트 만들수 있음
+    private final MemberRepository memberRepository;
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
 
     // 회원가입
     public Long join(Member member){

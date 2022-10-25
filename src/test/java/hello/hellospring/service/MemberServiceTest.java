@@ -14,12 +14,14 @@ class MemberServiceTest {
     MemberService memberService;
     MemoryMemberRepository memberRepository;
 
+    // 이런게 의존성 주입 (DI) !! 굉장히 중요한 개념
     @BeforeEach
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);
     }
 
+    // 테스트 하나 돌린후에 DB에 저장된 정보 클리어
     @AfterEach
     public void afterEach(){
         memberRepository.clearStore();

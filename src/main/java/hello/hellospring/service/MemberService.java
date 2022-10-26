@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {
 // 컨트롤 + 시프트 + t 누르면 자동으로 테스트 만들수 있음
     private final MemberRepository memberRepository;
 
-    @Autowired
+
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
